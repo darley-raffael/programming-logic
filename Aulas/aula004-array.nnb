@@ -1,0 +1,492 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# 🔷 Básico\r\n\r\n> Dado a seguinte array. Conhecendo as diversas maneiras manipular um array.\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const names = [\r\n    'Edu',\r\n    'Carlos',\r\n    3\r\n]\r\n\r\nconsole.log(names);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'Edu', 'Carlos', 3 ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Alterando os valores"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const names = ['Edu', 'Carlos', 3]\r\nnames[0] = 'Darley';\r\nnames[2] = 'Jéssica'\r\n\r\nconsole.log(names);\r\n\r\n//>> [ 'Darley', 'Carlos', 'Jéssica' ]"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'Darley', 'Carlos', 'Jéssica' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> *Acessamos a index do array e reatribuímos os valores.*"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### → Outra forma de se construir um array: `new Array()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const names2  = new Array('darley', 'juliana', 'jessica')\r\n\r\nconsole.log(names2);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'darley', 'juliana', 'jessica' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Deletando Valores: `delete`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "delete names[1]\r\n\r\nnames\r\n\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[90m<1 empty item>\u001b[39m,",
+                                "  \u001b[32m'Jéssica'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> - *somente os valores são deletados*\r\n> - *a posição fica vazia*"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "→ Reatribuindo a posição vazia"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "names[1] = 'Juliana'"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'Juliana'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Coletando valores: `[…]`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> Para tranferir os valores de uma array para outro usamos o conceito de ***spread operator***"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const alunos = [...names]\r\n\r\nalunos\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[32m'Carlos'\u001b[39m,",
+                                "  \u001b[32m'Jéssica'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> *Os `…` Serve para ‘espalharmos’ os valores do array no conteúdo de outro*"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Acrescentando valores: `.push()` | `.unshift()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "→ **Adicionando ao final**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "alunos.push('Neia')\r\n\r\nalunos"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[32m'Carlos'\u001b[39m,",
+                                "  \u001b[32m'Jéssica'\u001b[39m,",
+                                "  \u001b[32m'Neia'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**→Adicionando ao início**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "alunos.unshift('Arthur');\r\n\r\nalunos"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Arthur'\u001b[39m,",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[32m'Carlos'\u001b[39m,",
+                                "  \u001b[32m'Jéssica'\u001b[39m,",
+                                "  \u001b[32m'Neia'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> Podemos também listar a quantidade de posições\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "\r\nalunos.length"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m5\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Removendo posições: `.pop()` | `.shift()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**→ Removendo do início**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let removeFinal = alunos.shift()"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**→ Removendo do final**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let removeInicio = alunos.pop()"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> *Podemos ver os valores que foram removidos*"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const remove = [removeInicio, removeFinal]\r\n\r\nremove"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Neia'\u001b[39m,",
+                                "  \u001b[32m'Arthur'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Fatiando o Array: `.slice()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const familia = [ 'Arthur', 'Darley', 'Juliana', 'Jéssica', 'Neia' ]\r\n\r\nalunos.slice(0,3)\r\n\r\n//>> apresenta os valores do index [0] ao [3]\r\n\r\nalunos.slice(0, -1)\r\n\r\n//>> apresenta os valores da posição [0] ignora a última [5]"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[32m'Carlos'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -96,9 +96,16 @@
             ]
         },
         {
+            "language": "markdown",
+            "source": [
+                "### Somando valores de um Objeto"
+            ],
+            "outputs": []
+        },
+        {
             "language": "javascript",
             "source": [
-                "var person = {\r\n    grade1: 12,\r\n    grade2: 23,\r\n    grade: 3\r\n}\r\n\r\nvar grade = Object.values(person)\r\n\r\nconsole.log(grade)\r\n\r\nfunction sum (){\r\n    let sum = 0;\r\n    for(const i in grade){\r\n        sum += notas[i]\r\n    }\r\n\r\n    return sum\r\n}\r\n\r\n\r\nconsole.log(sum())\r\n"
+                "var person = {\r\n    grade1: 12,\r\n    grade2: 23,\r\n    grade: 3\r\n}\r\n\r\nvar grade = Object.values(person)\r\n\r\nconsole.log(grade)\r\n\r\nfunction sum (){\r\n    let sum = 0;\r\n    for(const i in grade){\r\n        sum += grade[i]\r\n    }\r\n\r\n    return sum\r\n}\r\n\r\n\r\nsum()\r\n"
             ],
             "outputs": [
                 {
@@ -106,9 +113,19 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "NaN",
+                                "[ 12, 23, 3 ]",
                                 "",
                                 ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m38\u001b[39m"
                             ]
                         }
                     ]
@@ -118,7 +135,7 @@
         {
             "language": "javascript",
             "source": [
-                "let notas = [2, 4, 5, 4, 3]\r\n\r\nfunction somar() {\r\n  let soma = 0\r\n  for(let i in notas) {\r\n    soma += notas[i]\r\n  }\r\n  return soma\r\n}\r\n\r\nconsole.log(sum())"
+                "let notas = [2, 4, 5, 4, 3]\r\n\r\nfunction somar() {\r\n  let soma = 0\r\n  for(let i in notas) {\r\n    soma += notas[i]\r\n  }\r\n  return soma\r\n}\r\n\r\nsomar()"
             ],
             "outputs": [
                 {
@@ -126,9 +143,18 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "0",
                                 "",
                                 ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m18\u001b[39m"
                             ]
                         }
                     ]

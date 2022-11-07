@@ -1,0 +1,92 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "### Somando valores de um Array\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let arr = [1,2,3,4,5,6]\n\nfunction sum (value){\n   \n    let sum = 0\n    for (let i = 0; i < value.length; i++) {\n         sum += value[i];\n        \n    }\n\n    return sum\n}\n\nconsole.log(sum(arr))\n\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "21",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "var arr = [8,8,9];\nvar soma = 0;\nfor(var i = 0; i < arr.length; i++) {\n    soma += arr[i];\n}\nsoma"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m25\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Input de usuário pelo terminal"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const readline = require('readline')\nconst rl = readline.createInterface(process.stdin, process.stdout)\n\nrl.question('Qual a sua idade? ', (age)=>{\n    console.log(`Sua idade é: ${age}`);\n    rl.close()\n})\n\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Qual a sua idade? Sua idade é: cxc",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function soma (number1, number2){\n    return number1 + number2\n}\n\nsoma(2,3)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m5\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

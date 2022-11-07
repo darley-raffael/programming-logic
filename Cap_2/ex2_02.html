@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine JS</title>
+</head>
+
+<body>
+    <h1>
+        <i>Cine JS: Filmes em Cartaz</i>
+    </h1>
+
+    <form>
+        <label for="inMovie"><strong>Título do filme:</strong></label>
+        <input type="text" name="filme" id="inMovie" required> <br><br>
+        <label for="inDuration"><strong>Duração (min):</strong></label>
+        <input type="number" name="min" id="inDuration" required><br><br>
+        <input type="submit" value="Converter em horas e minutos">
+    </form>
+
+    <h3></h3>
+    <h4></h4>
+
+
+
+    <script>
+        const forms = document.querySelector('form')
+        const resp1 = document.querySelector('h3')
+        const resp2 = document.querySelector('h4')
+
+
+
+
+        forms.addEventListener('submit', e => {
+            const movie = forms.inMovie.value
+            const duration = Number(forms.inDuration.value)
+            let hour = Math.floor(duration / 60)
+            let min = duration % 60
+
+            resp1.innerText = `Seu filme escolhido: ${movie}`
+            resp2.innerText = `${hour} hora(s) e ${min} minuto(s)`
+
+            e.preventDefault()
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

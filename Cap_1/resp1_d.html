@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de alunos</title>
+</head>
+
+<body>
+    <h1><i>Escola Paraíso</i></h1>
+    <div class="content"></div>
+
+
+    <script>
+        const student = {
+            name: prompt('Nome do aluno: '),
+            grades: {
+                grade1: Number(prompt('1ª nota: ')),
+                grade2: Number(prompt('2ª nota: ')),
+                grade3: Number(prompt('3ª nota: ')),
+                // grade4: Number(prompt('4ª nota: ')),
+            },
+
+        }
+
+        let gradesValue = Object.values(student.grades)
+        function sum() {
+            let sum = 0;
+            for (let i in gradesValue) {
+                sum += gradesValue[i]
+            }
+
+            return sum
+        }
+
+        let average = sum() / gradesValue.length
+        average = Math.round(average)
+
+        function approved() {
+            if (average >= 7) {
+                return `
+                Sua média final foi de: ${average.toFixed(2)} </br>
+                Parabéns ${student.name}, você foi aprovado(a).
+                `
+            } else {
+                return `
+                Sua média final foi de: ${average.toFixed(2)}. </br>
+                Que pena ${student.name} você foi reprovado(a)
+                `
+            }
+        }
+
+
+        document.querySelector('.content').innerHTML = `
+        <h2><i> ${approved()} </i></h2>
+        `
+    </script>
+</body>
+
+</html>

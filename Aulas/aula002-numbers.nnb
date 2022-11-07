@@ -1,0 +1,326 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## 🔷 Básico de Number"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Convertendo números para strings -> `toString()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let nu1 = 23\r\nlet nu2 = 2.5\r\n\r\nconsole.log(nu1.toString() + nu2);\r\n\r\nconsole.log(typeof nu1); // tipo do número não foi alterado \r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "232.5",
+                                "number",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- podemo alterar permanentemente o número para string"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "nu1 = nu1.toString()\r\n\r\nconsole.log(typeof nu1);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "string",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Arredondando números float -> `toFixed()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let numFloat = 12.54673888\r\n\r\nnumFloat = numFloat.toFixed(2) // duas casas decimais depois da vírgula\r\n\r\nconsole.log(numFloat);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "12.55",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Podemos também validar valores `Number.isInteger()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let n1 = 23\r\n\r\nconsole.log(Number.isInteger(n1)) // validou se o número é inteiro\r\n\r\nconsole.log(Number.isInteger(numFloat));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Usando o Objeto `Math`    "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Arredondando o número -> `floor()` | `ceil()` | `round()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let n3 = 9.1548\r\n\r\nlet numFloor = Math.floor(n3) // para baixo\r\nlet numCeil = Math.ceil(n3) // para cima\r\n\r\nconsole.log(numFloor)\r\nconsole.log(numCeil)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "9",
+                                "10",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> o método `round()` arredonda para o número mais próximo"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let numRound = Math.round(n3) \r\n\r\nconsole.log(numRound);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "9",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Descobrindo o maior e o menor número de uma sequência -> `max()` | `min()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "console.log(Math.max(1,2,5,-7,154,1547,0,5,9));\r\n\r\nconsole.log(Math.min(1,2,5,-7,154,1547,0,5,9));\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1547",
+                                "-7",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Gerando Números aleatórios -> `random()`\r\n> gera um número aleatório entre 0 e 1, o 1 não é incluído"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "var numRandom = Math.random() \r\n\r\nconsole.log(numRandom)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0.9206755083760179",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> gerando um número entre 0 e 10"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "numRandom = Math.round(Math.random() * 10)\r\n\r\nconsole.log(numRandom);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "4",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### 🔵 *Extra: Analisando valores numéricos de um array*"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Usando função `reduce()`\r\n> Esse método é mais performático e recomendado em casos de array muito grande"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "var numbers = [1,2,4,7,8,15,-4]\r\n\r\nvar max = numbers.reduce((a, b) =>{\r\n    return Math.max(a,b)\r\n}, - Infinity)\r\n\r\nconsole.log(max)\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "15",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Usando o método `spread operator`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "var max = Math.max(...numbers)\r\n\r\nconsole.log(max);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "15",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

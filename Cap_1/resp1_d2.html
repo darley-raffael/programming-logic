@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média alunos</title>
+</head>
+<body>
+    <h1><i>
+        Escolinha Paraíso
+    </i></h1>
+
+
+    <script>
+        //MODO 1 DE FAZER 
+        // var grade1 = Number(prompt('1ª Nota: '))
+        // var grade2 = Number(prompt('2ª Nota: '))
+        // var grade3 = Number(prompt('3ª Nota: '))
+
+        // var average =  (grade1 + grade2 + grade3) / 3
+
+        // alert(`Média do aluno: ${average.toFixed(2)}`)
+
+        // MODO 2 DE FAZER
+        
+        var student = prompt('Nome do aluno: ')
+        var studentGrade = {
+            grade1: Number(prompt('1ª Nota: ')),
+            grade2: Number(prompt('2ª Nota: ')),
+            grade3: Number(prompt('3ª Nota: '))
+       }
+       var average = (studentGrade.grade1 + studentGrade.grade2 + studentGrade.grade3) / Object.keys(studentGrade).length
+
+       function approved (){
+        if(average >= 7){
+            return `
+            Sua média final foi de: ${average.toFixed(2)}
+            Parabéns ${student}, você foi aprovado(a).
+            `
+        }else{
+            return `
+            Sua média final foi de: ${average.toFixed(2)}
+            Que pena ${student}, você foi reprovado.
+            `
+        }
+       }
+
+       alert(approved())
+
+
+      
+        
+
+    </script>
+</body>
+</html>

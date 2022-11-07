@@ -1,0 +1,52 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# comandos aqui papai"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "console.log('Agora sim bebe')"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Agora sim bebe",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Usando o `readline` do node para input de dados"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "import readline from \"readline\";\r\nconst rl = readline.createInterface({\r\n    input: process.stdin,\r\n    output: process.stdout\r\n})"
+            ],
+            "outputs": []
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "### Trabalhando com o Objetos"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Criando um objeto"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const person = {\r\n    nome: 'Darley',\r\n    sobrenome: 'Raffael',\r\n    idade:28\r\n};\r\n\r\nconsole.log(person.nome) // Acessando valores do objeto"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Darley",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Usando uma função para criar objetos"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "//FACTORY FUNCTION\r\nfunction createPerson (nome, sobrenome, idade){ \r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade\r\n    }\r\n}\r\n\r\nconst person1 = createPerson('Jessica', 'Castro', 29)\r\nconsole.log(person1)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ nome: 'Jessica', sobrenome: 'Castro', idade: 29 }",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- Podemos criar multiplos objetos "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Adicionando funções "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function createPerson (nome, sobrenome, idade){ \r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade,\r\n        fala: ()=>{\r\n          console.log(`Olá eu sou ${nome}, tenho ${idade} anos.`)\r\n        }\r\n    }\r\n}\r\n\r\nconst person2 = createPerson('Darley','Raffael',28)\r\nperson2.fala()"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Olá eu sou Darley, tenho 28 anos.",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "var person = {\r\n    grade1: 12,\r\n    grade2: 23,\r\n    grade: 3\r\n}\r\n\r\nvar grade = Object.values(person)\r\n\r\nconsole.log(grade)\r\n\r\nfunction sum (){\r\n    let sum = 0;\r\n    for(const i in grade){\r\n        sum += notas[i]\r\n    }\r\n\r\n    return sum\r\n}\r\n\r\n\r\nconsole.log(sum())\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "NaN",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let notas = [2, 4, 5, 4, 3]\r\n\r\nfunction somar() {\r\n  let soma = 0\r\n  for(let i in notas) {\r\n    soma += notas[i]\r\n  }\r\n  return soma\r\n}\r\n\r\nconsole.log(sum())"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

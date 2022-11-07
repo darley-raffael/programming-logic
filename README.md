@@ -3,6 +3,6 @@
 
 > Este repositório se destina a exercitar a Lógica de Programação com Java Script
 
-### 📚 Materias de estudo:
+### 📚 Materiais de estudo:
 
 📘 Livro - **Lógica de Programação com Java Script**

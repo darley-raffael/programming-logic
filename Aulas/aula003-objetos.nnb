@@ -44,7 +44,7 @@
         {
             "language": "javascript",
             "source": [
-                "//FACTORY FUNCTION\r\nfunction createPerson (nome, sobrenome, idade){ \r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade\r\n    }\r\n}\r\n\r\nconst person1 = createPerson('Jessica', 'Castro', 29)\r\nconsole.log(person1)"
+                "//FACTORY FUNCTION\r\nfunction createPerson (nome, sobrenome, idade){ \r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade\r\n    }\r\n}\r\n\r\nconst person1 = createPerson('Jessica', 'Castro', 29)\r\nperson1"
             ],
             "outputs": [
                 {
@@ -52,9 +52,22 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "{ nome: 'Jessica', sobrenome: 'Castro', idade: 29 }",
                                 "",
                                 ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "{",
+                                "  nome: \u001b[32m'Jessica'\u001b[39m,",
+                                "  sobrenome: \u001b[32m'Castro'\u001b[39m,",
+                                "  idade: \u001b[33m29\u001b[39m",
+                                "}"
                             ]
                         }
                     ]
@@ -94,6 +107,130 @@
                     ]
                 }
             ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### *Podemos transformar um objeto em um JSON*"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- ***`stringify()`***"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const person3 = createPerson('Juliana', 'Marinho', 23)\r\n\r\nconst toJson = JSON.stringify(person3)\r\n\r\ntoJson"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'{\"nome\":\"Juliana\",\"sobrenome\":\"Marinho\",\"idade\":23}'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> Fazendo o inverso ***`parse()`***"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const obj = JSON.parse(toJson)\r\n\r\nobj"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "{",
+                                "  nome: \u001b[32m'Juliana'\u001b[39m,",
+                                "  sobrenome: \u001b[32m'Marinho'\u001b[39m,",
+                                "  idade: \u001b[33m23\u001b[39m",
+                                "}"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Desetruturando valores "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const objct = {\r\n    name: 'Dárley',\r\n    idade: 25,\r\n    cidade: 'Florianópolis',\r\n    email: 'darley@email.com',\r\n    atividade: 'Desenvolvedor'\r\n\r\n}\r\n\r\n\r\nconst { name, email, atividade } = objct\r\n\r\nconsole.log(name, email, atividade);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Dárley darley@email.com Desenvolvedor",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- extraimos os valores do objeto e cada valor se tornou uma variável separada"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function funcionario() {\r\n    const { name, email, atividade } = objct\r\n\r\n    return \r\n}"
+            ],
+            "outputs": []
         },
         {
             "language": "markdown",

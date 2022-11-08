@@ -209,7 +209,7 @@
                             "value": [
                                 "[",
                                 "  \u001b[32m'Darley'\u001b[39m,",
-                                "  \u001b[32m'Carlos'\u001b[39m,",
+                                "  \u001b[32m'Juliana'\u001b[39m,",
                                 "  \u001b[32m'Jéssica'\u001b[39m",
                                 "]"
                             ]
@@ -263,7 +263,7 @@
                             "value": [
                                 "[",
                                 "  \u001b[32m'Darley'\u001b[39m,",
-                                "  \u001b[32m'Carlos'\u001b[39m,",
+                                "  \u001b[32m'Juliana'\u001b[39m,",
                                 "  \u001b[32m'Jéssica'\u001b[39m,",
                                 "  \u001b[32m'Neia'\u001b[39m",
                                 "]"
@@ -305,7 +305,7 @@
                                 "[",
                                 "  \u001b[32m'Arthur'\u001b[39m,",
                                 "  \u001b[32m'Darley'\u001b[39m,",
-                                "  \u001b[32m'Carlos'\u001b[39m,",
+                                "  \u001b[32m'Juliana'\u001b[39m,",
                                 "  \u001b[32m'Jéssica'\u001b[39m,",
                                 "  \u001b[32m'Neia'\u001b[39m",
                                 "]"
@@ -459,7 +459,7 @@
         {
             "language": "javascript",
             "source": [
-                "const familia = [ 'Arthur', 'Darley', 'Juliana', 'Jéssica', 'Neia' ]\r\n\r\nalunos.slice(0,3)\r\n\r\n//>> apresenta os valores do index [0] ao [3]\r\n\r\nalunos.slice(0, -1)\r\n\r\n//>> apresenta os valores da posição [0] ignora a última [5]"
+                "const familia = [ 'Arthur', 'Darley', 'Juliana', 'Jéssica', 'Neia' ]\r\n\r\nfamilia.slice(0,3)\r\n//>> apresenta os valores do index [0] ao [3]\r\n\r\n\r\n"
             ],
             "outputs": [
                 {
@@ -479,14 +479,98 @@
                             "mime": "text/plain",
                             "value": [
                                 "[",
+                                "  \u001b[32m'Arthur'\u001b[39m,",
                                 "  \u001b[32m'Darley'\u001b[39m,",
-                                "  \u001b[32m'Carlos'\u001b[39m",
+                                "  \u001b[32m'Juliana'\u001b[39m",
                                 "]"
                             ]
                         }
                     ]
                 }
             ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "familia.slice(0, -1)\r\n\r\n//>> apresenta os valores da posição [0] ignora a última [5]"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Arthur'\u001b[39m,",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[32m'Juliana'\u001b[39m,",
+                                "  \u001b[32m'Jéssica'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Invertendo os valores de um Array : `.reverse()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "familia.reverse()"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'Neia'\u001b[39m,",
+                                "  \u001b[32m'Jéssica'\u001b[39m,",
+                                "  \u001b[32m'Juliana'\u001b[39m,",
+                                "  \u001b[32m'Darley'\u001b[39m,",
+                                "  \u001b[32m'Arthur'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### *Somando valores*"
+            ],
+            "outputs": []
         }
     ]
 }

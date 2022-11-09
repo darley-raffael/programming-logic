@@ -10,7 +10,7 @@
         {
             "language": "javascript",
             "source": [
-                "const names = [\r\n    'Edu',\r\n    'Carlos',\r\n    3\r\n]\r\n\r\nconsole.log(names);"
+                "const names = [\n    'Edu',\n    'Carlos',\n    3\n]\n\nconsole.log(names);"
             ],
             "outputs": [
                 {
@@ -19,7 +19,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "[ 'Edu', 'Carlos', 3 ]",
-                                "",
                                 ""
                             ]
                         }
@@ -37,7 +36,7 @@
         {
             "language": "javascript",
             "source": [
-                "const names = ['Edu', 'Carlos', 3]\r\nnames[0] = 'Darley';\r\nnames[2] = 'Jéssica'\r\n\r\nconsole.log(names);\r\n\r\n//>> [ 'Darley', 'Carlos', 'Jéssica' ]"
+                "const names = ['Edu', 'Carlos', 3]\nnames[0] = 'Darley';\nnames[2] = 'Jéssica'\n\nconsole.log(names);\n\n//>> [ 'Darley', 'Carlos', 'Jéssica' ]"
             ],
             "outputs": [
                 {
@@ -46,7 +45,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "[ 'Darley', 'Carlos', 'Jéssica' ]",
-                                "",
                                 ""
                             ]
                         }
@@ -71,7 +69,7 @@
         {
             "language": "javascript",
             "source": [
-                "const names2  = new Array('darley', 'juliana', 'jessica')\r\n\r\nconsole.log(names2);"
+                "const names2  = new Array('darley', 'juliana', 'jessica')\n\nconsole.log(names2);"
             ],
             "outputs": [
                 {
@@ -80,7 +78,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "[ 'darley', 'juliana', 'jessica' ]",
-                                "",
                                 ""
                             ]
                         }
@@ -98,20 +95,9 @@
         {
             "language": "javascript",
             "source": [
-                "delete names[1]\r\n\r\nnames\r\n\r\n"
+                "delete names[1]\n\nnames\n\n"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -151,17 +137,6 @@
                 {
                     "items": [
                         {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "items": [
-                        {
                             "mime": "text/plain",
                             "value": [
                                 "\u001b[32m'Juliana'\u001b[39m"
@@ -188,20 +163,9 @@
         {
             "language": "javascript",
             "source": [
-                "const alunos = [...names]\r\n\r\nalunos\r\n"
+                "const alunos = [...names]\n\nalunos\n"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -242,20 +206,9 @@
         {
             "language": "javascript",
             "source": [
-                "alunos.push('Neia')\r\n\r\nalunos"
+                "alunos.push('Neia')\n\nalunos"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -283,20 +236,9 @@
         {
             "language": "javascript",
             "source": [
-                "alunos.unshift('Arthur');\r\n\r\nalunos"
+                "alunos.unshift('Arthur');\n\nalunos"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -325,20 +267,9 @@
         {
             "language": "javascript",
             "source": [
-                "\r\nalunos.length"
+                "\nalunos.length"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -370,19 +301,7 @@
             "source": [
                 "let removeFinal = alunos.shift()"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "markdown",
@@ -396,19 +315,7 @@
             "source": [
                 "let removeInicio = alunos.pop()"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "markdown",
@@ -420,20 +327,9 @@
         {
             "language": "javascript",
             "source": [
-                "const remove = [removeInicio, removeFinal]\r\n\r\nremove"
+                "const remove = [removeInicio, removeFinal]\n\nremove"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -459,20 +355,9 @@
         {
             "language": "javascript",
             "source": [
-                "const familia = [ 'Arthur', 'Darley', 'Juliana', 'Jéssica', 'Neia' ]\r\n\r\nfamilia.slice(0,3)\r\n//>> apresenta os valores do index [0] ao [3]\r\n\r\n\r\n"
+                "const familia = [ 'Arthur', 'Darley', 'Juliana', 'Jéssica', 'Neia' ]\n\nfamilia.slice(0,3)\n//>> apresenta os valores do index [0] ao [3]\n\n\n"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -492,20 +377,9 @@
         {
             "language": "javascript",
             "source": [
-                "familia.slice(0, -1)\r\n\r\n//>> apresenta os valores da posição [0] ignora a última [5]"
+                "familia.slice(0, -1)\n\n//>> apresenta os valores da posição [0] ignora a última [5]"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -539,17 +413,6 @@
                 {
                     "items": [
                         {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "items": [
-                        {
                             "mime": "text/plain",
                             "value": [
                                 "[",
@@ -577,19 +440,7 @@
             "source": [
                 "var notaAluno = [8,9,7]"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "markdown",
@@ -601,20 +452,9 @@
         {
             "language": "javascript",
             "source": [
-                "var soma = notaAluno.reduce((soma, i)=> {\r\n    return soma + i\r\n})\r\n\r\nsoma"
+                "var soma = notaAluno.reduce((soma, i)=> {\n    return soma + i\n})\n\nsoma"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -637,7 +477,53 @@
         {
             "language": "javascript",
             "source": [
-                "var soma = 0\r\n\r\nfor(const i in notaAluno){\r\n    soma += notaAluno[i]\r\n}\r\n\r\nsoma"
+                "var soma = 0\n\nfor(const i in notaAluno){\n    soma += notaAluno[i]\n}\n\nsoma"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m24\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# 🔹 Avançado"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Aplicando o `map()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> `map()` é um método que serve para percorrer os todos os elementos de uma array"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const tags=[\n    {id: 1, name: \"node\", note_id:1},\n    {id: 2, name: \"express\", note_id:1},\n    {id: 3, name: \"react\", note_id:1},\n    {id: 4, name: \"javascript\", note_id:2},\n    {id: 5, name: \"frontend\", note_id:2},\n    ];"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const newArray = tags.map(tag => {\n    return {\n        name: tag.name\n    }\n})\n\nconsole.log(newArray)"
             ],
             "outputs": [
                 {
@@ -645,18 +531,57 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "",
+                                "[",
+                                "  { name: 'node' },",
+                                "  { name: 'express' },",
+                                "  { name: 'react' },",
+                                "  { name: 'javascript' },",
+                                "  { name: 'frontend' }",
+                                "]",
                                 ""
                             ]
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "- percorreu cada elemento do array e retornou o que foi definido"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Aplicando o `filter()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const arrayFilter = tags.filter(tag => tag.note_id === 2)\n\narrayFilter"
+            ],
+            "outputs": [
                 {
                     "items": [
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[33m24\u001b[39m"
+                                "[",
+                                "  {",
+                                "    id: \u001b[33m4\u001b[39m,",
+                                "    name: \u001b[32m'javascript'\u001b[39m,",
+                                "    note_id: \u001b[33m2\u001b[39m",
+                                "  },",
+                                "  {",
+                                "    id: \u001b[33m5\u001b[39m,",
+                                "    name: \u001b[32m'frontend'\u001b[39m,",
+                                "    note_id: \u001b[33m2\u001b[39m",
+                                "  }",
+                                "]"
                             ]
                         }
                     ]

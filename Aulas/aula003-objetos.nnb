@@ -17,7 +17,7 @@
         {
             "language": "javascript",
             "source": [
-                "const person = {\r\n    nome: 'Darley',\r\n    sobrenome: 'Raffael',\r\n    idade:28\r\n};\r\n\r\nconsole.log(person.nome) // Acessando valores do objeto"
+                "const person = {\n    nome: 'Darley',\n    sobrenome: 'Raffael',\n    idade:28\n};\n\nconsole.log(person.nome) // Acessando valores do objeto"
             ],
             "outputs": [
                 {
@@ -26,7 +26,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "Darley",
-                                "",
                                 ""
                             ]
                         }
@@ -44,20 +43,9 @@
         {
             "language": "javascript",
             "source": [
-                "//FACTORY FUNCTION\r\nfunction createPerson (nome, sobrenome, idade){ \r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade\r\n    }\r\n}\r\n\r\nconst person1 = createPerson('Jessica', 'Castro', 29)\r\nperson1"
+                "//FACTORY FUNCTION\nfunction createPerson (nome, sobrenome, idade){ \n    return {\n        nome,\n        sobrenome,\n        idade\n    }\n}\n\nconst person1 = createPerson('Jessica', 'Castro', 29)\nperson1"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -91,7 +79,7 @@
         {
             "language": "javascript",
             "source": [
-                "function createPerson (nome, sobrenome, idade){ \r\n    return {\r\n        nome,\r\n        sobrenome,\r\n        idade,\r\n        fala: ()=>{\r\n          console.log(`Olá eu sou ${nome}, tenho ${idade} anos.`)\r\n        }\r\n    }\r\n}\r\n\r\nconst person2 = createPerson('Darley','Raffael',28)\r\nperson2.fala()"
+                "function createPerson (nome, sobrenome, idade){ \n    return {\n        nome,\n        sobrenome,\n        idade,\n        fala: ()=>{\n          console.log(`Olá eu sou ${nome}, tenho ${idade} anos.`)\n        }\n    }\n}\n\nconst person2 = createPerson('Darley','Raffael',28)\nperson2.fala()"
             ],
             "outputs": [
                 {
@@ -100,7 +88,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "Olá eu sou Darley, tenho 28 anos.",
-                                "",
                                 ""
                             ]
                         }
@@ -125,20 +112,9 @@
         {
             "language": "javascript",
             "source": [
-                "const person3 = createPerson('Juliana', 'Marinho', 23)\r\n\r\nconst toJson = JSON.stringify(person3)\r\n\r\ntoJson"
+                "const person3 = createPerson('Juliana', 'Marinho', 23)\n\nconst toJson = JSON.stringify(person3)\n\ntoJson"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -161,20 +137,9 @@
         {
             "language": "javascript",
             "source": [
-                "const obj = JSON.parse(toJson)\r\n\r\nobj"
+                "const obj = JSON.parse(toJson)\n\nobj"
             ],
             "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "",
-                                ""
-                            ]
-                        }
-                    ]
-                },
                 {
                     "items": [
                         {
@@ -201,7 +166,7 @@
         {
             "language": "javascript",
             "source": [
-                "const objct = {\r\n    name: 'Dárley',\r\n    idade: 25,\r\n    cidade: 'Florianópolis',\r\n    email: 'darley@email.com',\r\n    atividade: 'Desenvolvedor'\r\n\r\n}\r\n\r\n\r\nconst { name, email, atividade } = objct\r\n\r\nconsole.log(name, email, atividade);"
+                "const objct = {\n    name: 'Dárley',\n    idade: 25,\n    cidade: 'Florianópolis',\n    email: 'darley@email.com',\n    atividade: 'Desenvolvedor'\n\n}\n\n\nconst { name, email, atividade } = objct\n\nconsole.log(name, email, atividade);"
             ],
             "outputs": [
                 {
@@ -210,7 +175,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "Dárley darley@email.com Desenvolvedor",
-                                "",
                                 ""
                             ]
                         }
@@ -226,13 +190,6 @@
             "outputs": []
         },
         {
-            "language": "javascript",
-            "source": [
-                "function funcionario() {\r\n    const { name, email, atividade } = objct\r\n\r\n    return \r\n}"
-            ],
-            "outputs": []
-        },
-        {
             "language": "markdown",
             "source": [
                 "### Somando valores de um Objeto"
@@ -242,7 +199,7 @@
         {
             "language": "javascript",
             "source": [
-                "var person = {\r\n    grade1: 12,\r\n    grade2: 23,\r\n    grade: 3\r\n}\r\n\r\nvar grade = Object.values(person)\r\n\r\nconsole.log(grade)\r\n\r\nfunction sum (){\r\n    let sum = 0;\r\n    for(const i in grade){\r\n        sum += grade[i]\r\n    }\r\n\r\n    return sum\r\n}\r\n\r\n\r\nsum()\r\n"
+                "var person = {\n    grade1: 12,\n    grade2: 23,\n    grade: 3\n}\n\nvar grade = Object.values(person)\n\nconsole.log(grade)\n\nfunction sum (){\n    let sum = 0;\n    for(const i in grade){\n        sum += grade[i]\n    }\n\n    return sum\n}\n\n\nsum()\n"
             ],
             "outputs": [
                 {
@@ -272,7 +229,7 @@
         {
             "language": "javascript",
             "source": [
-                "let notas = [2, 4, 5, 4, 3]\r\n\r\nfunction somar() {\r\n  let soma = 0\r\n  for(let i in notas) {\r\n    soma += notas[i]\r\n  }\r\n  return soma\r\n}\r\n\r\nsomar()"
+                "let notas = [2, 4, 5, 4, 3]\n\nfunction somar() {\n  let soma = 0\n  for(let i in notas) {\n    soma += notas[i]\n  }\n  return soma\n}\n\nsomar()"
             ],
             "outputs": [
                 {

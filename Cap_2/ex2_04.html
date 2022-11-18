@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        main{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <h1>
+            <i>Restaurante Js</i>
+        </h1>
+
+        <form>
+            <p>Preço por kg R$:
+                <input class="form-control" type="number" id="inQuilo" min="0" step="0.01" required>
+            </p>
+
+            <p>Consumo do Cliente (gr):
+                <input class="form-control" type="number" id="inConsumo" min="0" required>
+            </p>
+
+            <input class="btn btn-primary mb-3" type="submit" value="Calcular Preço">
+        </form>
+
+
+        <h3 id="outResp1"></h3>
+    </main>
+</body>
+
+
+<script>
+    const form = document.querySelector('form')
+    const resp = document.querySelector('#outResp1')
+
+
+    form.addEventListener('submit', e => {
+       const quilo = Number(form.inQuilo.value)
+       const consumo = Number(form.inConsumo.value)
+
+       const valor = (quilo / 1000) * consumo
+
+       resp.innerText = `Valor a Pagar é R$: ${valor.toFixed(2)}`
+
+       e.preventDefault()
+    })
+
+
+</script>
+</html>

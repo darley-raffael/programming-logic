@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenda JS</title>
+    <script src="./js/script03.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        main{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <h1>
+            <i>Revenda de Veículo</i>
+        </h1>
+
+        <form>
+            <p>Veículo:
+                <input class="form-control" type="text" id="inVeiculo" required>
+            </p>
+
+            <p>Preço R$:
+                <input class="form-control" type="number" id="inPreco" required>
+            </p>
+
+            <input class="btn btn-primary mb-3" type="submit" value="Ver Promoção">
+        </form>
+
+
+        <h3 id="outResp1"></h3>
+        <h3 id="outResp2"></h3>
+        <h3 id="outResp3"></h3>
+    </main>
+</body>
+
+</html>

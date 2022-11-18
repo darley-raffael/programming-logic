@@ -19,6 +19,7 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "21",
+                                "",
                                 ""
                             ]
                         }
@@ -32,6 +33,17 @@
                 "var arr = [8,8,9];\nvar soma = 0;\nfor(var i = 0; i < arr.length; i++) {\n    soma += arr[i];\n}\nsoma"
             ],
             "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
                 {
                     "items": [
                         {
@@ -54,7 +66,7 @@
         {
             "language": "javascript",
             "source": [
-                "const readline = require('readline')\nconst rl = readline.createInterface(process.stdin, process.stdout)\n\nrl.question('Qual a sua idade? ', (age)=>{\n    console.log(`Sua idade é: ${age}`);\n    rl.close()\n})\n\n"
+                "const readline = require('readline')\r\nconst rl = readline.createInterface(process.stdin, process.stdout)\r\n\r\nrl.question('Qual a sua idade? ', (age)=>{\r\n    console.log(`Sua idade é: ${age}`);\r\n    rl.close()\r\n})\r\n\r\n"
             ],
             "outputs": [
                 {
@@ -62,7 +74,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Qual a sua idade? Sua idade é: cxc",
+                                "Qual a sua idade? ",
                                 ""
                             ]
                         }
@@ -73,15 +85,37 @@
         {
             "language": "javascript",
             "source": [
-                "function soma (number1, number2){\n    return number1 + number2\n}\n\nsoma(2,3)"
+                "function soma (number1, number2){\r\n    return number1 + number2\r\n}\r\n\r\nsoma(2,3)"
             ],
             "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
                 {
                     "items": [
                         {
                             "mime": "text/plain",
                             "value": [
                                 "\u001b[33m5\u001b[39m"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Sua idade é: 12",
+                                ""
                             ]
                         }
                     ]

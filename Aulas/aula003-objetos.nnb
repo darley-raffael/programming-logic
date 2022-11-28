@@ -3,7 +3,7 @@
         {
             "language": "markdown",
             "source": [
-                "### Trabalhando com o Objetos"
+                "### 🔹 Trabalhando com o Objetos"
             ],
             "outputs": []
         },
@@ -208,7 +208,6 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "[ 12, 23, 3 ]",
-                                "",
                                 ""
                             ]
                         }
@@ -235,20 +234,31 @@
                 {
                     "items": [
                         {
-                            "mime": "application/vnd.code.notebook.stdout",
+                            "mime": "text/plain",
                             "value": [
-                                "",
-                                ""
+                                "\u001b[33m18\u001b[39m"
                             ]
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let list = {\n    n1: 2,\n    n2: 4,\n    n3: 6\n}\n\nObject.values(list)\n"
+            ],
+            "outputs": [
                 {
                     "items": [
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[33m18\u001b[39m"
+                                "[",
+                                "  \u001b[33m2\u001b[39m,",
+                                "  \u001b[33m4\u001b[39m,",
+                                "  \u001b[33m6\u001b[39m",
+                                "]"
                             ]
                         }
                     ]

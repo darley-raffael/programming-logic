@@ -1,0 +1,88 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# 🔷 Trabalhando com datas no JS"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Para trabalhar com datas usamos o Objeto `Date()`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const date = new Date();\r\n\r\ndate"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[35m2022-12-02T16:48:48.323Z\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "> Ao rodarmos o código notamos que é criado um novo objeto mostrando a tada atual como também as horas e os minutos."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### Pegando valores do `Date`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "console.log(\r\n`Dia: ${date.getDate()}\r\n Mês: ${date.getMonth() + 1} \r\n Ano: ${date.getFullYear()}\r\n Hora: ${date.getHours()}\r\n Min: ${date.getMinutes()}\r\n Seg: ${date.getSeconds()}\r\n Ms: ${date.getMilliseconds()}\r\n Dia semana: ${date.getDay()}` //  0 - Domingo, 6 - Sábado\r\n)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Dia: 2",
+                                " Mês: 12 ",
+                                " Ano: 2022",
+                                " Hora: 13",
+                                " Min: 48",
+                                " Seg: 48",
+                                " Ms: 323",
+                                " Dia semana: 5",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
